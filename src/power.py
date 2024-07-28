@@ -1,5 +1,5 @@
 """
-Purpose: Determmines best power plan based on past consumption
+Purpose: Determmines best power plan based on past consumption (pull from powertochoose)
 Author: Syam Evani
 """
 
