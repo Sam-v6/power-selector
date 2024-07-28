@@ -232,6 +232,20 @@ if __name__ =="__main__":
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["gexa_eco_saver_plus_12"] = gexa_eco_saver_plus_12.calculate_year_totals()
 
+    # gexa_save_ev_choice_12
+    gexa_save_ev_choice_12 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              11.2,         # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              11.2,         # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              11.2,         # [cents/kWh]       Third range cost 
+                              0,            # [dollars/month]   Base charge per month 
+                              0,            # [dollars/month]   Bill credit price
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["gexa_save_ev_choice_12"] = gexa_save_ev_choice_12.calculate_year_totals()
+
     # Gexa Energy prime preferred plus 12 (100% Renewable)
     gexa_prime_preferred_plus_12 = PowerPlan(consumption_list,
                               5000,         # [kWh]             First range ceiling
@@ -273,6 +287,20 @@ if __name__ =="__main__":
                               1000,         # [kWh]             Bill credit lower threshold (must be above this)
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["frontier_saver_plus_12"] = frontier_saver_plus_12.calculate_year_totals()
+
+    # frontier_power_saver_9 (similar to cleank sky embrace green 10)
+    frontier_power_saver_9 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              8.290,        # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              8.290,        # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              8.290,        # [cents/kWh]       Third range cost 
+                              0,            # [dollars/month]   Base charge per month 
+                              0,            # [dollars/month]   Bill credit price
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["frontier_power_saver_9"] = frontier_power_saver_9.calculate_year_totals()
    
     # express_energy_flash_12
     express_energy_flash_12 = PowerPlan(consumption_list,
@@ -330,6 +358,20 @@ if __name__ =="__main__":
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["reliant_basic_power_plan_24"] = reliant_basic_power_plan_24.calculate_year_totals()
 
+    # Reliant power on 36 plan
+    reliant_power_on_36_plan = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              10.1394,      # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              10.1394,      # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              10.1394,      # [cents/kWh]       Third range cost 
+                              5.00,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["reliant_power_on_36_plan"] = reliant_power_on_36_plan.calculate_year_totals()
+
     # Reliant secure advantage 24 plan
     reliant_secure_advantage_24 = PowerPlan(consumption_list,
                               5000,         # [kWh]             First range ceiling
@@ -344,7 +386,6 @@ if __name__ =="__main__":
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["reliant_secure_advantage_24"] = reliant_secure_advantage_24.calculate_year_totals()
 
-    
     # Reliant conservation 12
     reliant_conservation_12 = PowerPlan(consumption_list,
                               1000,         # [kWh]             First range ceiling
@@ -372,7 +413,91 @@ if __name__ =="__main__":
                               1000,         # [kWh]             Bill credit lower threshold (must be above this)
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["lantana_fixed_36"] = lantana_fixed_36.calculate_year_totals()
+
+    # ranchero_smart_fixed_24
+    ranchero_smart_fixed_24 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              8.2745,       # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              8.2745,       # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              8.2745,       # [cents/kWh]       Third range cost 
+                              4.95,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["ranchero_smart_fixed_24"] = ranchero_smart_fixed_24.calculate_year_totals()
+
+     # sofed_better_rate_24
+    sofed_better_rate_24 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              8.1745,       # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              8.1745,       # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              8.1745,       # [cents/kWh]       Third range cost 
+                              4.95,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["sofed_better_rate_24"] = sofed_better_rate_24.calculate_year_totals()
+
+     # cleansky_embrace_green_24
+    cleansky_embrace_green_24 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              8.8,          # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              8.8,          # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              8.8,          # [cents/kWh]       Third range cost 
+                              0.00,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["cleansky_embrace_green_24"] = cleansky_embrace_green_24.calculate_year_totals()
+
+    # Revolution_stars_and_stripes_12
+    Revolution_stars_and_stripes_12 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              8.764,        # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              8.764,        # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              8.764,        # [cents/kWh]       Third range cost 
+                              2.00,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["Revolution_stars_and_stripes_12"] = Revolution_stars_and_stripes_12.calculate_year_totals()\
+    
+    # infuse_essential_infusion_12
+    infuse_essential_infusion_12 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              8.564,        # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              8.564,        # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              8.564,        # [cents/kWh]       Third range cost 
+                              4.00,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["infuse_essential_infusion_12"] = infuse_essential_infusion_12.calculate_year_totals()
    
+   # sofed_better_rate_10
+    sofed_better_rate_10 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              7.7745,       # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              7.7745,       # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              7.7745,       # [cents/kWh]       Third range cost 
+                              4.95,         # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["sofed_better_rate_10"] = sofed_better_rate_10.calculate_year_totals()
+
     #-----------------------Find optimal plan-----------------------
     # Initialize variables to track the smallest sum and corresponding key
     smallest_sum = float('inf')  # Set to positive infinity initially
@@ -388,7 +513,10 @@ if __name__ =="__main__":
             smallest_sum = sum_value
             smallest_key = key
 
-    # Print winner winner chicken dinner
-    for key in totals:
-        print(f"Plan: {key} with cost: ${totals[key][12]}")
+    # Sort the plans by cost
+    sorted_plans = sorted(totals.items(), key=lambda item: item[1][-1])
+
+    # Print plans from least to most expensive
+    for key, value in sorted_plans:
+        print(f"Plan: {key} with cost: ${value[-1]}")
     print("Optimal power plan is:", smallest_key, "with an annual price of:", smallest_sum)
