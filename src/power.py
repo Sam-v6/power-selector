@@ -134,18 +134,18 @@ if __name__ =="__main__":
     # Coonsumption list, range 1 upper, range 1 price, range 2 upper, range 2 price, range 3 upper, range 3 price, base charge, bill credit price, bill credit lower, bill credit higher
 
     # Last year comparison - TXU Energy (also called TXU energy saver's discount 12)
-    savers_choice_12 = PowerPlan(consumption_list,
-                              1200,         # [kWh]             First range ceiling
-                              10.7,         # [cents/kWh]       First range cost
-                              2000,         # [kWh]             Second range ceiling
-                              5.4,          # [cents/kWh]       Second range cost
-                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
-                              11.2,         # [cents/kWh]       Third range cost 
-                              9.95,         # [dollars/month]   Base charge per month 
-                              30,           # [dollars/month]   Bill credit price
-                              1200,         # [kWh]             Bill credit lower threshold (must be above this)
-                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
-    totals["savers_choice_12"] = savers_choice_12.calculate_year_totals()
+    # savers_choice_12 = PowerPlan(consumption_list,
+    #                           1200,         # [kWh]             First range ceiling
+    #                           10.7,         # [cents/kWh]       First range cost
+    #                           2000,         # [kWh]             Second range ceiling
+    #                           5.4,          # [cents/kWh]       Second range cost
+    #                           5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+    #                           11.2,         # [cents/kWh]       Third range cost 
+    #                           9.95,         # [dollars/month]   Base charge per month 
+    #                           30,           # [dollars/month]   Bill credit price
+    #                           1200,         # [kWh]             Bill credit lower threshold (must be above this)
+    #                           5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    # totals["savers_choice_12"] = savers_choice_12.calculate_year_totals()
     
     # TXU Energy Smart Edge 12
     savers_choice_12 = PowerPlan(consumption_list,
@@ -170,7 +170,7 @@ if __name__ =="__main__":
                               5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
                               14.8,         # [cents/kWh]       Third range cost 
                               9.95,         # [dollars/month]   Base charge per month 
-                              0,           # [dollars/month]   Bill credit price
+                              0,            # [dollars/month]   Bill credit price
                               800,          # [kWh]             Bill credit lower threshold (must be above this)
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["txu_simple_rate_12"] = txu_simple_rate_12.calculate_year_totals()
@@ -315,6 +315,20 @@ if __name__ =="__main__":
                               1000,         # [kWh]             Bill credit lower threshold (must be above this)
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["reliant_conservation_12"] = reliant_conservation_12.calculate_year_totals()
+
+    # Lantana 36
+    lantana_fixed_36 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              12.40491,     # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              12.40491,     # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              12.40491,     # [cents/kWh]       Third range cost 
+                              0,            # [dollars/month]   Base charge per month 
+                              0.00,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              1000,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["lantana_fixed_36"] = lantana_fixed_36.calculate_year_totals()
    
     #-----------------------Find optimal plan-----------------------
     # Initialize variables to track the smallest sum and corresponding key
