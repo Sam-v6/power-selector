@@ -330,6 +330,20 @@ if __name__ =="__main__":
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["reliant_basic_power_plan_24"] = reliant_basic_power_plan_24.calculate_year_totals()
 
+    # Reliant secure advantage 24 plan
+    reliant_secure_advantage_24 = PowerPlan(consumption_list,
+                              5000,         # [kWh]             First range ceiling
+                              12.6894,      # [cents/kWh]       First range cost
+                              5000,         # [kWh]             Second range ceiling
+                              12.6894,      # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              12.6894,      # [cents/kWh]       Third range cost 
+                              9.95,         # [dollars/month]   Base charge per month 
+                              9.95,         # [dollars/month]   Bill credit price (there's a usage charge that only applies if <1000 kWh so I apply it like this)
+                              800,          # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["reliant_secure_advantage_24"] = reliant_secure_advantage_24.calculate_year_totals()
+
     
     # Reliant conservation 12
     reliant_conservation_12 = PowerPlan(consumption_list,
