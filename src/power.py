@@ -161,6 +161,20 @@ if __name__ =="__main__":
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["txu_smart_edge_12"] = savers_choice_12.calculate_year_totals()
 
+     # TXU energy price saver 18
+    txu_energy_price_saver_18 = PowerPlan(consumption_list,
+                              1200,         # [kWh]             First range ceiling
+                              15.5,         # [cents/kWh]       First range cost
+                              2000,         # [kWh]             Second range ceiling
+                              7.8,          # [cents/kWh]       Second range cost
+                              5000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              16.3,         # [cents/kWh]       Third range cost 
+                              9.95,         # [dollars/month]   Base charge per month 
+                              30,           # [dollars/month]   Bill credit price
+                              1200,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["txu_energy_price_saver_18"] = txu_energy_price_saver_18.calculate_year_totals()
+
     # txu_simple_rate_12
     txu_simple_rate_12 = PowerPlan(consumption_list,
                               5000,         # [kWh]             First range ceiling
@@ -175,7 +189,7 @@ if __name__ =="__main__":
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["txu_simple_rate_12"] = txu_simple_rate_12.calculate_year_totals()
 
-    # txu_simple_rate_12
+    # txu_simple_rate_24
     txu_smart_deal_24 = PowerPlan(consumption_list,
                               1200,         # [kWh]             First range ceiling
                               17.8,         # [cents/kWh]       First range cost
@@ -188,6 +202,21 @@ if __name__ =="__main__":
                               1200,         # [kWh]             Bill credit lower threshold (must be above this)
                               5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
     totals["txu_smart_deal_24"] = txu_smart_deal_24.calculate_year_totals()
+
+    # txu_energy_price_saver_24
+    txu_energy_price_saver_24 = PowerPlan(consumption_list,
+                              1200,         # [kWh]             First range ceiling
+                              17.2,         # [cents/kWh]       First range cost
+                              2000,         # [kWh]             Second range ceiling
+                              8.6,          # [cents/kWh]       Second range cost
+                              2000,         # [kwH]             Third range ceiling, (arbritraily high upper ceiling)
+                              18.1,         # [cents/kWh]       Third range cost 
+                              9.95,         # [dollars/month]   Base charge per month 
+                              30,           # [dollars/month]   Bill credit price
+                              1200,         # [kWh]             Bill credit lower threshold (must be above this)
+                              5000)         # [kWh]             Bill credit higher threshold (arbritraily high upper ceiling)
+    totals["txu_energy_price_saver_24"] = txu_energy_price_saver_24.calculate_year_totals()
+
 
     # Gexa Energy Eco Saver Plus 12
     gexa_eco_saver_plus_12 = PowerPlan(consumption_list,
