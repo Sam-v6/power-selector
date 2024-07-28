@@ -1,0 +1,2 @@
+- Some type of LML to parse through downloaded pdfs and create objects (rather than manually reading)
+- Modify functions so that I dont need to specify higher ranges if they don't exist
